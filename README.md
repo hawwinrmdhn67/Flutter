@@ -1,4 +1,4 @@
-# fluttertesting
+# flutter
 
 A new Flutter project.
 
