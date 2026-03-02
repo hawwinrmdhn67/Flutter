@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'profil.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,27 +36,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _goToProfile() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const ProfilePage()),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
-
-        // Menu Profile di Navbar
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.person),
-            onPressed: _goToProfile,
-          ),
-        ],
       ),
       body: Center(
         child: Column(
