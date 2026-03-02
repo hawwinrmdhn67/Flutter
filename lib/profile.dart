@@ -81,14 +81,7 @@ class ProfilePage extends StatelessWidget {
                       ListTile(
                         leading: Icon(Icons.code, color: Colors.green),
                         title: Text("Hobi"),
-                        subtitle: Text("Coding"),
-                      ),
-                      Divider(),
-
-                      ListTile(
-                        leading: Icon(Icons.workspace_premium, color: Colors.green),
-                        title: Text("Cita-cita"),
-                        subtitle: Text("Software Engineer"),
+                        subtitle: Text("Bermain Visual Studio Code"),
                       ),
                     ],
                   ),

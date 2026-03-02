@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'profil.dart';
+import 'profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
+      debugShowCheckedModeBanner: false, // Debug Hilang
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
