@@ -38,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  // Routing ke halaman profile
   void _goToProfile() {
     Navigator.push(
       context,
