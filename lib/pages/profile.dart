@@ -11,6 +11,7 @@ class ProfilePage extends StatelessWidget {
         title: const Text("Profil Saya"),
         backgroundColor: Colors.green,
         elevation: 0,
+        automaticallyImplyLeading: false, // hapus tombol kembali
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -32,7 +33,7 @@ class ProfilePage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            
+
             const SizedBox(height: 5),
 
             const Text(
