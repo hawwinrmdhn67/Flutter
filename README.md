@@ -1,17 +1,108 @@
-# flutter
+# 📱 Flutter Login App (BLoC + API)
 
-A new Flutter project.
+Aplikasi Flutter sederhana menggunakan State Management BLoC dengan integrasi API login.
 
-## Getting Started
+## 🚀 Fitur Utama
+- Login menggunakan API (DummyJSON)
+- State management menggunakan BLoC
+- Navigasi antar halaman
+- Error handling (login gagal)
+- UI sederhana & clean
 
-This project is a starting point for a Flutter application.
+## 🧱 Struktur Project
 
-A few resources to get you started if this is your first Flutter project:
+```
+lib/
+│
+├── bloc/
+│   ├── login_bloc.dart
+│   ├── login_event.dart
+│   └── login_state.dart
+│
+├── pages/
+│   ├── login_page.dart
+│   └── profile.dart
+│
+├── services/
+│   └── api_service.dart
+│
+├── routes.dart
+└── main.dart
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## 🔄 Flow Aplikasi (BLoC)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+User Input (LoginPage)
+        ↓
+LoginButtonPressed (Event)
+        ↓
+LoginBloc (Process Logic)
+        ↓
+ApiService (Call API)
+        ↓
+LoginState (Result)
+        ↓
+UI Update (Success / Error)
+```
+
+## 🧠 Penjelasan BLoC
+
+### Event
+Event adalah aksi dari user.
+
+Contoh:
+```dart
+LoginButtonPressed(username, password)
+```
+
+### Bloc
+Bloc memproses event dan mengubah state.
+
+```dart
+emit(LoginLoading());
+emit(LoginSuccess(user));
+emit(LoginFailure(error));
+```
+
+### State
+State adalah kondisi yang dikirim ke UI.
+
+- LoginInitial → kondisi awal  
+- LoginLoading → proses login  
+- LoginSuccess → login berhasil  
+- LoginFailure → login gagal  
+
+## 🌐 API yang Digunakan
+
+Endpoint:
+```
+https://dummyjson.com/auth/login
+```
+
+Contoh request:
+```json
+{
+  "username": "emilys",
+  "password": "emilyspass"
+}
+```
+
+## 🔐 Login Akun
+
+```
+username: emilys
+password: emilyspass
+```
+
+## 🔁 Alur Navigasi
+
+```
+LoginPage → (Login Success) → ProfilePage
+```
+
+## 🎯 Tujuan Penggunaan BLoC
+
+- Memisahkan UI dan Business Logic  
+- Membuat kode lebih rapi dan scalable  
+- Mempermudah maintenance  
