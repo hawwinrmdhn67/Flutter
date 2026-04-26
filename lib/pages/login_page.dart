@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
           children: [
             const SizedBox(height: 40),
 
-            // ICON / HEADER
+            // Icon / Header
             const CircleAvatar(
               radius: 50,
               backgroundColor: Colors.green,
